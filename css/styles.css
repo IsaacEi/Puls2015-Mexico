@@ -128,7 +128,7 @@ nav ul li a
 {
 	margin: 1em 1em 0 0;
 	text-align: right;
-	padding: 0.7em;
+    padding-bottom: 0.7em;
 }
 #contenido .item .datos_item .fecha_item
 {
