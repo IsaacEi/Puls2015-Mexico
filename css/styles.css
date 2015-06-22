@@ -138,7 +138,7 @@ header #logo img
 }
 header #logo img:hover
 {
-	transform: rotate(360deg);
+	transform: rotate(360deg) scale(0.5,0.5);
 	/*-moz-transform: rotate(360deg);
 	-o-transform: rotate(360deg);
 	-ms-transform: rotate(360deg);*/

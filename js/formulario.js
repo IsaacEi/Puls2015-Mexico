@@ -1,18 +1,31 @@
 var $form = $('#formulario'),
 	$titulo = $('#titulo'),
 	$url = $('#url'),
-	$button = $('#mostrar-form'),
+	//$button = $('#mostrar-form'),
 	$list = $('#contenido'),
 	$post = $('.item').first();
 
-
-function mostrarFormulario(){
-	$form.slideToggle();
-	return false;
+if(localStorage.getItem('autoSave'))
+{
+	$titulo.val(sessionStorage.getItem('titulo'));
+	$url.val(sessionStorage.getItem('url'));
 }
 
-function agregarPost()
+var id = setInterval(function(){
+	sessionStorage.setItem('titulo',$titulo.val());
+	sessionStorage.setItem('url',$url.val());
+}, 1000)
+
+function mostrarOcultarFormulario(e){
+	e.preventDefault();
+	$form.slideToggle();
+	$list.slideToggle();
+	
+}
+
+function agregarPost(e)
 {
+	e.preventDefault();
 	var url = $url.val(),
 		titulo = $titulo.val(),
 		$clone = $post.clone(),
@@ -30,11 +43,13 @@ function agregarPost()
 
 	$list.prepend($clone);
 
+	mostrarOcultarFormulario();
+	$titulo.val('');
+	$url.val('');
 	$clone.fadeIn();
-
-	return false;
 }
 
 // Eventos
-$button.click( mostrarFormulario );
+//$button.click( mostrarFormulario );
+$('#publicar_nav a ').click(mostrarOcultarFormulario);
 $form.on('submit',agregarPost);
