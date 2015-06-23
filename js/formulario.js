@@ -16,15 +16,16 @@ var id = setInterval(function(){
 	sessionStorage.setItem('url',$url.val());
 }, 1000)
 
-function mostrarOcultarFormulario(e){
-	e.preventDefault();
+function mostrarOcultarFormulario(){
+	//e.preventDefault();
 	$form.slideToggle();
 	$list.slideToggle();
-	
+	return false;
 }
 
 function agregarPost(e)
 {
+
 	e.preventDefault();
 	var url = $url.val(),
 		titulo = $titulo.val(),

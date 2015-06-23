@@ -3,11 +3,12 @@
 <head>
 	<meta charset="utf-8"/>
 	<meta name="description" content="Proyecto de la primera generación 2015 méxico diseño web online"/> 
-	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-sscale=1">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
 	<title>Venta de Tines 2015 ELISAM</title>
 	
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/styles.css">
+
 	<script type="text/javascript" src="js/prefixfree.js"></script>
 	
 </head>
@@ -20,7 +21,6 @@
 			Venta de tines ELISMA 2015 
 		</h1>
 		<figure id="avatar" >
-			<img src="images/avatarNinja.png" />
 		<figure>
 	</header>
 
@@ -44,11 +44,16 @@
 	</form>	
 
 	<aside>
+		<div id="clima">
+			
+		</div>
+		<div id="geo">
+		</div>
 		<video width="320" height="240" controls autoplay>
-		<source src="videos/lecturas.mp4" type="video/mp4">
-		<source src="videos/lecturas.ogg" type="video/mp4">
+			<source src="videos/lecturas.mp4" type="video/mp4">
+			<source src="videos/lecturas.ogg" type="video/mp4">
 			<!-- Actualiza tu navegador -->
-	</video>
+		</video>
 	</aside>
 
 	<section id="contenido">
@@ -226,15 +231,15 @@
 			<strong>Power by Elizam ®</strong>
 		</p>
 		<p>ismary.2015</p>
+		<div class="logos"></div>
 	</footer>
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="js/formulario.js"></script>
+	<script src="js/geo.js"></script>
+	<script src="js/ajax.js"></script>
 	<script >
-		window.onload= function(){
-			console.log('ya se disparo el evento onload');
-		}
-		$(document).on('ready', function(){
-				console.log('Ya se disparo el evento DOMContentLoaded')
+		$(function(){
+
 		});
 	</script>
 
